@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>ThermoCubic - Real Gas Property Estimator</title>
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="hero"><div class="box" style="position:relative">
+<img src="logo.png" class="logo" style="position:absolute;top:18px;left:20px;height:58px;margin:0" onerror="this.remove()"><div class="inst" style="text-align:left;padding-left:68px;min-height:44px;display:flex;align-items:center;margin-bottom:6px">Department of Chemical Engineering, IIT Delhi</div>
+<h1>ThermoCubic</h1>
+<div class="sub">Real Gas PVT, Enthalpy, Entropy and Fugacity Estimator using Cubic Equations of State</div>
+<form onsubmit="go();return false">
+<label style="text-align:left">Your name (shown on saved calculations)</label>
+<input id="nm" placeholder="e.g. Jiya" maxlength="30">
+<button class="btn">Continue</button></form>
+<div class="dev">Developed by <b>Vaatsalya</b> and <b>Jiya</b></div><div class="dev" style="border:0;margin-top:0;padding-top:4px;font-size:11px">Vaatsalya Paliwal (2025CH71989) &middot; Jiya Ray (2025CH71744)</div>
+</div></div>
+<script>
+document.getElementById('nm').value=localStorage.getItem('tc_user')||'';
+function go(){localStorage.setItem('tc_user',document.getElementById('nm').value.trim()||'Guest');location.href='app.html'}
+</script></body></html>
