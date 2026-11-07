@@ -1,0 +1,28 @@
+ThermoCubic - How to run the Python code in VS Code 🌡️
+Made by Vaatsalya Paliwal and Jiya Ray, Department of Chemical
+Engineering, IIT Delhi
+
+Thank you for taking the time to review our project. This page explains
+how to run our Python code in VS Code and open the ThermoCubic
+interface in your browser.
+
+1. Unzip the downloaded file. You will see a folder called RealGasStudio
+   (or ThermoCubic-main if you downloaded the ZIP from GitHub).
+2. In VS Code, go to File > Open Folder and open that folder. app.py
+   should be visible directly inside it, together with eos.py and the
+   web folder.
+3. Go to Terminal > New Terminal. It opens inside the folder.
+4. Run this command:
+
+       python app.py
+
+5. The app opens automatically in your browser at
+   http://127.0.0.1:8000. If the browser does not open on its own, type
+   http://127.0.0.1:8000 into the address bar yourself.
+6. Keep the terminal open while you use the app. Press Ctrl+C in the
+   terminal to stop it.
+
+You need Python 3.6 or newer. No extra packages are required.
+
+If Python is not installed, the same app also runs online at
+https://jiya-ray.github.io/ThermoCubic/ 🔗
