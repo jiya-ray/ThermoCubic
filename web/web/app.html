@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><title>ThermoCubic</title>
+<link rel="stylesheet" href="/style.css"></head><body>
+<div class="top"><img src="/logo.png" style="height:34px;margin-right:12px;vertical-align:middle" onerror="this.remove()"><div class="brand" style="display:inline-block;vertical-align:middle">ThermoCubic<small>by Vaatsalya and Jiya</small></div>
+<div class="tabs" id="tabs">
+<button data-t="calc" class="on">Calculator</button><button data-t="cmp">Compare Models</button>
+<button data-t="iso">P-V Plot</button><button data-t="gr">Graphs</button><button data-t="his">History</button><button data-t="learn">Learn</button>
+</div><div class="user" id="who"></div></div>
+<div class="wrap">
+<div id="calc" class="tab"><div class="grid">
+<div><div class="card"><h3>Gas and conditions</h3>
+<label>Gas</label><select id="gas"></select>
+<label>Equation of state</label><select id="model"></select>
+<label>Temperature</label><div class="row"><input id="T" type="number" step="any" value="350"><select class="u" id="tu"><option>K</option><option value="C">&deg;C</option></select></div>
+<label>Pressure</label><div class="row"><input id="P" type="number" step="any" value="9.4573"><select class="u" id="pu"><option>bar</option><option>kPa</option><option>MPa</option><option>atm</option></select></div>
+<button class="btn" onclick="run()">Calculate</button>
+<div id="err" class="err hide"></div>
+<div class="note" style="margin-top:12px">Reference state for H and S: ideal gas at 298.15 K and 1 bar (H = S = 0). Ideal-gas heat capacity from Cp/R = A + BT + CT<sup>2</sup> + DT<sup>-2</sup>.</div></div>
+<div class="card"><h3>Critical data</h3><div class="note" id="crit"></div></div></div>
+<div id="out"><div class="card note">Pick a gas and conditions, then press Calculate.</div></div>
+</div></div>
+<div id="cmp" class="tab hide"><div class="card"><h3>All four equations at the same T and P</h3>
+<div class="note">Uses the gas and conditions entered on the Calculator tab.</div><br><div id="cmpout"></div></div></div>
+<div id="iso" class="tab hide"><div class="card"><h3>P-V isotherm</h3><div class="note">Pressure against molar volume at the entered temperature, using the selected equation. The dot is the calculated state.</div><div id="plot"></div></div></div>
+<div id="gr" class="tab hide"><div class="card"><h3>Property graphs</h3>
+<div class="note">Uses the gas, equation, T and P from the Calculator tab. Choose the ranges below.</div>
+<div class="row" style="max-width:640px;margin:10px 0"><div><label>Max pressure (bar)</label><input id="pmax" type="number" step="any"></div><div><label>T from (K)</label><input id="t1" type="number" step="any"></div><div><label>T to (K)</label><input id="t2" type="number" step="any"></div></div>
+<button class="btn sm" onclick="graphs()">Draw graphs</button> <span id="gerr" class="note"></span></div>
+<div id="gout"></div></div>
+<div id="his" class="tab hide"><div class="card"><h3>Saved calculations</h3>
+<div style="display:flex;gap:8px;margin-bottom:10px"><a class="btn alt sm" href="/api/history.csv" style="text-decoration:none">Download CSV</a><button class="btn alt sm" onclick="clearAll()">Clear all</button></div>
+<div id="hisout" style="overflow-x:auto"></div></div></div>
+<div id="learn" class="tab hide"><div class="card" id="learntxt"></div></div>
+</div>
+<script src="/app.js"></script></body></html>
