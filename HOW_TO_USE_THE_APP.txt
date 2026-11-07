@@ -1,0 +1,52 @@
+ThermoCubic - HOW TO USE OUR APP :)
+made by Vaatsalya and Jiya
+
+So you downloaded our app. Great choice. Here's how to get it running in
+under a minute. 🚀
+
+STEP 1: Open the folder 📂
+After unzipping, you will see a folder called RealGasStudio. Everything
+lives inside it, so please don't pull app.py out on its own. It needs its
+friends.
+
+STEP 2: Point your terminal at the folder 💻
+Open a terminal (the VS Code terminal works great) and go inside:
+
+    cd RealGasStudio
+
+This step matters: Python looks for app.py inside the folder, so if you
+run it from anywhere else it won't find the file.
+
+STEP 3: Run it ▶️
+
+    python app.py
+
+That's it. Your browser opens ThermoCubic at http://127.0.0.1:8000 🎉
+
+What you need:
+- Python 3 (version 3.6 or newer). That's all. No pip install, no extra
+  packages. Yes, really. 🙌
+
+How to stop:
+Press Ctrl+C in the terminal and the app goes to sleep. 😴
+
+What the app does:
+- Pick a gas (we have 11), pick an equation of state (van der Waals,
+  Redlich-Kwong, SRK or Peng-Robinson), enter T and P.
+- You get molar volume, compressibility factor Z, enthalpy H, entropy S,
+  fugacity f and the fugacity coefficient phi.
+- Compare all 4 equations side by side, plot 6 different graphs, and check
+  your calculation history. The app remembers you. 🧠
+
+Bonus stuff:
+- Run the tests with `python test_eos.py`. They check our calculations
+  against the textbook examples. Spoiler: they pass. ✅
+- Your history is saved in history.db, right next to app.py.
+- All equations and constants come from Smith, Van Ness, Abbott and
+  Swihart, 8th edition (Table 3.1, Eq. 13.74, Tables B.1 and C.1). 📖
+- H and S are relative to the ideal gas at 298.15 K and 1 bar, where
+  H = 0 and S = 0.
+- The logo is the official IIT Delhi emblem, from
+  https://home.iitd.ac.in/images/preloaders/logo.png
+
+Now go predict some real gases. Have fun! 🧪🔥
