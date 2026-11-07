@@ -188,4 +188,4 @@ function graphs() {
       null, 'S is measured from the same reference state (ideal gas, 298.15 K, 1 bar, S = 0). Entropy rises with temperature and falls with pressure. The gap to the ideal curve is the residual entropy.' + jumpNote);
     $('gout').innerHTML = '<div class="gg">' + h + '</div>';
   });
-                                                                    }
+}
